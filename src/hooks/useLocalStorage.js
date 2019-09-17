@@ -12,7 +12,7 @@ export function useLocalStorage(key) {
   const setValue = value => {
     window.localStorage.setItem(key, JSON.stringify(value));
     setStoredValue(value);
-    // we are making an arrow function that will change the state of the component by using setStoredValue from our useState hook above.
+    // we are making an function that will take in a value as an argument and change the state of the component by using setStoredValue from our useState hook above.
   };
 
   return [storedValue, setValue];
